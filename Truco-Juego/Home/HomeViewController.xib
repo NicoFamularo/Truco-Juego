@@ -40,6 +40,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="A1Button:" destination="-1" eventType="touchUpInside" id="lQW-ol-Qa5"/>
+                                                <action selector="A1ButtonAction:" destination="-1" eventType="touchUpInside" id="2Gt-Km-ue9"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-Rr-PCt" userLabel="A2Button">
@@ -47,6 +48,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="A2Button:" destination="-1" eventType="touchUpInside" id="P0o-W8-NaT"/>
+                                                <action selector="A2ButtonAction:" destination="-1" eventType="touchUpInside" id="Nzi-vB-EIA"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-WS-qe9" userLabel="A3Button">
@@ -54,6 +56,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="A3Button:" destination="-1" eventType="touchUpInside" id="7d7-ty-heE"/>
+                                                <action selector="A3ButtonAction:" destination="-1" eventType="touchUpInside" id="i7H-aj-S6D"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -77,6 +80,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="B1Button:" destination="-1" eventType="touchUpInside" id="utw-Ou-b17"/>
+                                                <action selector="B1ButtonAction:" destination="-1" eventType="touchUpInside" id="8o5-L1-qKz"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-Ag-AGI" userLabel="B2Button">
@@ -84,6 +88,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="B2Button:" destination="-1" eventType="touchUpInside" id="Ujt-M1-Ve0"/>
+                                                <action selector="B2ButtonAction:" destination="-1" eventType="touchUpInside" id="AEL-2u-t9g"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-OV-Wpu" userLabel="B3Button">
@@ -91,6 +96,7 @@
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="B3Button:" destination="-1" eventType="touchUpInside" id="Y8R-Il-WyN"/>
+                                                <action selector="B3ButtonAction:" destination="-1" eventType="touchUpInside" id="xGq-oS-JRL"/>
                                             </connections>
                                         </button>
                                     </subviews>
