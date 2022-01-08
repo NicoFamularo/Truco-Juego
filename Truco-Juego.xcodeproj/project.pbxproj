@@ -14,6 +14,7 @@
 		0328593C278A24A300F2C21A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328593A278A24A300F2C21A /* HomeViewController.swift */; };
 		0328593D278A24A300F2C21A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328593B278A24A300F2C21A /* HomeViewController.xib */; };
 		03285940278A25B500F2C21A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328593F278A25B500F2C21A /* Extensions.swift */; };
+		03285943278A2C7A00F2C21A /* CardsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03285942278A2C7A00F2C21A /* CardsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0328593A278A24A300F2C21A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0328593B278A24A300F2C21A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0328593F278A25B500F2C21A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		03285942278A2C7A00F2C21A /* CardsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0328593F278A25B500F2C21A /* Extensions.swift */,
+				03285942278A2C7A00F2C21A /* CardsData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				03285925278A23E500F2C21A /* AppDelegate.swift in Sources */,
 				03285927278A23E500F2C21A /* SceneDelegate.swift in Sources */,
 				0328593C278A24A300F2C21A /* HomeViewController.swift in Sources */,
+				03285943278A2C7A00F2C21A /* CardsData.swift in Sources */,
 				03285940278A25B500F2C21A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

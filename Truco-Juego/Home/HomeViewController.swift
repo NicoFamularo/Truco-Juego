@@ -12,18 +12,38 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cardListing()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+//MARK: Outlets
+    
+    @IBOutlet weak var ScoreALabel: UILabel!
+    
+    
+    @IBAction func A1Button(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func A2Button(_ sender: Any) {
+    }
+    
+    @IBAction func A3Button(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var ScoreBLabel: UILabel!
+    
+    
+    @IBAction func B1Button(_ sender: Any) {
+    }
+    
+    @IBAction func B2Button(_ sender: Any) {
+    }
+    
+    @IBAction func B3Button(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
 }
