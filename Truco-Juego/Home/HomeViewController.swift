@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         print("B \(PlayerB.score)")
         print(mano)
         
+        
     }
     
     
@@ -69,6 +70,11 @@ class HomeViewController: UIViewController {
     
     @IBAction func B3Button(_ sender: Any) {
     }
+    
+    
+    @IBOutlet weak var ManoImage: UIImageView!
+    
+    
     
     
 //MARK: Actions
@@ -131,12 +137,14 @@ extension HomeViewController{
     }
     
     func pickMano(){
-        Person.manoNum = Int.random(in: 2...5)
+        Person.manoNum = Int.random(in: 2...40)
         
         if Person.manoNum % 2 == 0{
             mano = true
+            ManoImage.image = UIImage(systemName: "arrow.up")
         } else {
             mano = false
+            ManoImage.image = UIImage(systemName: "arrow.down")
         }
             
     }
