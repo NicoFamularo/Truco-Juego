@@ -10,7 +10,9 @@ import UIKit
 
 extension HomeViewController {
     
-    func cardListing() {
+    
+    
+    func cardListing() -> [String:Int] {
     
         var cardList = [String:Int]()
         
@@ -73,7 +75,8 @@ extension HomeViewController {
         cardList["Doce de Copa"] = 6
         cardList["Doce de Basto"] = 6
     
-
+        return cardList
+    
     }
 }
 

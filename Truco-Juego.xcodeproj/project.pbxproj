@@ -92,8 +92,8 @@
 		0328593E278A258100F2C21A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0328593F278A25B500F2C21A /* Extensions.swift */,
 				03285942278A2C7A00F2C21A /* CardsData.swift */,
+				0328593F278A25B500F2C21A /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5545HFPHJJ;
 				INFOPLIST_FILE = "Truco-Juego/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5545HFPHJJ;
 				INFOPLIST_FILE = "Truco-Juego/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

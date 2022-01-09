@@ -16,8 +16,7 @@ class HomeViewController: UIViewController {
     
     var mano:Bool = true    // True = A // False = B //
     
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,6 @@ class HomeViewController: UIViewController {
         
         
 //MARK: Function calling
-        
-        cardListing()
         
         resetGameScore()
         
@@ -38,7 +35,8 @@ class HomeViewController: UIViewController {
         print("B \(PlayerB.score)")
         print(mano)
         
-        
+        print(cardsShuffle())
+        print("----------------------")
     }
     
     
@@ -51,6 +49,9 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func A1Button(_ sender: Any) {
+        print(cardsShuffle())
+        
+        print("----------------------")
     }
     
     @IBAction func A2Button(_ sender: Any) {
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController {
     
     
     
-//MARK: Actions
+//MARK: Buttons actions
     
     
     @IBAction func A1ButtonAction(_ sender: UIButton) {
@@ -106,7 +107,7 @@ class HomeViewController: UIViewController {
 }
 
 
-//MARK: Person (Struct)
+//MARK: Person (Class)
 extension HomeViewController{
     
     public class Person {
@@ -133,11 +134,12 @@ extension HomeViewController{
     
     func resetGameScore(){
         PlayerA.score = 0
-        PlayerB.score = 5
+        PlayerB.score = 0
+        pickMano()
     }
     
     func pickMano(){
-        Person.manoNum = Int.random(in: 2...40)
+        Person.manoNum = Int.random(in: 1...40)
         
         if Person.manoNum % 2 == 0{
             mano = true
@@ -149,9 +151,68 @@ extension HomeViewController{
             
     }
     
-    
-    
+    func cardsShuffle() -> [Int : Dictionary<String, Int>.Element] {
+
+        let a1Card = cardListing().randomElement()!
+        
+        let b1Card = cardListing().randomElement()!
+        
+        
+        
+        let a2Card = cardListing().randomElement()!
+        let a3Card = cardListing().randomElement()!
+
+        
+        let b2Card = cardListing().randomElement()!
+        let b3Card = cardListing().randomElement()!
+        
+        
+        var deck = [1:a1Card, 2:b1Card, 3:a2Card, 4:b2Card, 5:a3Card, 6:b3Card]
+        
+        
+        for index in 1...6 {
+            
+            deck[index] = cardListing().randomElement()!
+            
+            
+            if index != 1 {
+                
+                func check(){
+                
+                    for index2 in 1...(index-1) {
+                            
+                        if deck[index]!.value == deck[index2]!.value {
+                            
+                            func pickOther(){
+                                
+                                print("repetido")
+                                deck[index] = cardListing().randomElement()!
+                                
+                                check()
+                            }
+                            
+                            pickOther()
+                            
+                        }
+                                
+                    }
+                        
+                }
+                
+                check()
+                                
+            }
+        }
+        return deck
+    }
+        
+        
+        
 }
+    
+    
+    
+
 
 
 
