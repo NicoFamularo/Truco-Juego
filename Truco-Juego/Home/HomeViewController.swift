@@ -14,20 +14,27 @@ class HomeViewController: UIViewController {
     let PlayerA = HomeViewController.Person(mano: 0, score: 0)
     let PlayerB = HomeViewController.Person(mano: 0, score: 0)
     
-    var mano:Bool = true    // True = A // False = B //
+    var mano: Bool = true    // True = A // False = B //
     
-
+    var a1card: Dictionary<String, Int>.Element? = nil
+    var a2card: Dictionary<String, Int>.Element? = nil
+    var a3card: Dictionary<String, Int>.Element? = nil
+    var b1card: Dictionary<String, Int>.Element? = nil
+    var b2card: Dictionary<String, Int>.Element? = nil
+    var b3card: Dictionary<String, Int>.Element? = nil
+    
+    var deck: [Int : Dictionary<String, Int>.Element]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setButtonsTitlesConfigurations()
         
 //MARK: Function calling
         
         resetGameScore()
         
-        pickMano()
+        pickFirstMano()
         
         print("Mano \(Person.manoNum)")
         
@@ -35,7 +42,6 @@ class HomeViewController: UIViewController {
         print("B \(PlayerB.score)")
         print(mano)
         
-        print(cardsShuffle())
         print("----------------------")
     }
     
@@ -48,32 +54,31 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var ScoreALabel: UILabel!
     
     
-    @IBAction func A1Button(_ sender: Any) {
-        print(cardsShuffle())
-        
-        print("----------------------")
-    }
+    @IBOutlet weak var A1Button: UIButton!
     
-    @IBAction func A2Button(_ sender: Any) {
-    }
     
-    @IBAction func A3Button(_ sender: Any) {
-    }
+    @IBOutlet weak var A2Button: UIButton!
+    
+    
+    @IBOutlet weak var A3Button: UIButton!
+    
     
     @IBOutlet weak var ScoreBLabel: UILabel!
     
     
-    @IBAction func B1Button(_ sender: Any) {
-    }
+    @IBOutlet weak var B1Button: UIButton!
     
-    @IBAction func B2Button(_ sender: Any) {
-    }
     
-    @IBAction func B3Button(_ sender: Any) {
-    }
+    @IBOutlet weak var B2Button: UIButton!
+    
+    
+    @IBOutlet weak var B3Button: UIButton!
     
     
     @IBOutlet weak var ManoImage: UIImageView!
+    
+    
+    @IBOutlet weak var StartButton: UIButton!
     
     
     
@@ -81,24 +86,61 @@ class HomeViewController: UIViewController {
 //MARK: Buttons actions
     
     
-    @IBAction func A1ButtonAction(_ sender: UIButton) {
+    @IBAction func StartButtonAction(_ sender: Any) {
+        
+        
+        print("----------------------")
+        
+        deck = cardsShuffle()
+        
+        a1card = deck![1]
+        b1card = deck![2]
+        a2card = deck![3]
+        b2card = deck![4]
+        a3card = deck![5]
+        b3card = deck![6]
+
+        print(a1card!.key)
+        print(a2card!.key)
+        print("\(a3card!.key) \n")
+        
+        print(b1card!.key)
+        print(b2card!.key)
+        print(b3card!.key)
+
+        pickAnyMano()
+        
+        setCardTitles()
+        
+        print("----------------------")
+    }
     
+    
+    @IBAction func A1ButtonAction(_ sender: UIButton) {
+        A1Button.setTitle("A1", for: .normal)
+        
     }
     
     @IBAction func A2ButtonAction(_ sender: UIButton) {
+        A2Button.setTitle("A2", for: .normal)
     }
     
     @IBAction func A3ButtonAction(_ sender: UIButton) {
+        A3Button.setTitle("A3", for: .normal)
     }
     
     
     @IBAction func B1ButtonAction(_ sender: UIButton) {
+        B1Button.setTitle("B1", for: .normal)
     }
     
     @IBAction func B2ButtonAction(_ sender: UIButton) {
+        B2Button.setTitle("B2", for: .normal)
     }
     
     @IBAction func B3ButtonAction(_ sender: UIButton) {
+        B3Button.setTitle("B3", for: .normal)
+        
     }
     
     
@@ -132,13 +174,18 @@ extension HomeViewController{
 
 extension HomeViewController{
     
+    
+    //MARK: Reset Score
+    
     func resetGameScore(){
         PlayerA.score = 0
         PlayerB.score = 0
-        pickMano()
+        pickFirstMano()
     }
     
-    func pickMano(){
+    //MARK: Manos
+    
+    func pickFirstMano(){
         Person.manoNum = Int.random(in: 1...40)
         
         if Person.manoNum % 2 == 0{
@@ -148,8 +195,28 @@ extension HomeViewController{
             mano = false
             ManoImage.image = UIImage(systemName: "arrow.down")
         }
-            
+        
     }
+    
+    func pickAnyMano(){
+        
+        mano.toggle()
+
+        if mano == true {
+            
+            ManoImage.image = UIImage(systemName: "arrow.up")
+            
+        } else {
+            
+            ManoImage.image = UIImage(systemName: "arrow.down")
+            
+        }
+        
+    }
+    
+    
+    
+    //MARK: Cards Suffle
     
     func cardsShuffle() -> [Int : Dictionary<String, Int>.Element] {
 
@@ -207,11 +274,46 @@ extension HomeViewController{
     }
         
         
-        
 }
     
     
+//MARK: Set Titles
+
+extension HomeViewController {
+        
     
+    func setCardTitles(){
+        
+        A1Button.setTitle(a1card!.key, for: .normal)
+        
+        A2Button.setTitle(a2card!.key, for: .normal)
+        
+        A3Button.setTitle(a3card!.key, for: .normal)
+        
+        
+        B1Button.setTitle(b1card!.key, for: .normal)
+        
+        B2Button.setTitle(b2card!.key, for: .normal)
+        
+        B3Button.setTitle(b3card!.key, for: .normal)
+        
+        
+    }
+    
+    func setButtonsTitlesConfigurations(){
+        
+        let buttonsList = [A1Button, A2Button, A3Button, B1Button, B2Button, B3Button]
+        
+        for index in buttonsList{
+            index?.titleLabel?.numberOfLines = 2
+            index?.titleLabel?.adjustsFontSizeToFitWidth = true
+            index?.titleLabel?.textAlignment = .center
+        }
+        
+        
+    }
+    
+}
 
 
 

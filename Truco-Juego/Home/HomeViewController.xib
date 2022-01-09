@@ -10,9 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Truco_Juego" customModuleProvider="target">
             <connections>
+                <outlet property="A1Button" destination="Yvh-Cb-zDi" id="CyG-CI-VqS"/>
+                <outlet property="A2Button" destination="9eB-Rr-PCt" id="bdQ-Qs-s2d"/>
+                <outlet property="A3Button" destination="gfT-WS-qe9" id="ttT-1v-3Sq"/>
+                <outlet property="B1Button" destination="9p1-FV-V55" id="k9P-UH-v0S"/>
+                <outlet property="B2Button" destination="j6w-Ag-AGI" id="EDp-0f-g5s"/>
+                <outlet property="B3Button" destination="HJi-OV-Wpu" id="pLC-nk-VPv"/>
                 <outlet property="ManoImage" destination="oFx-dh-NhA" id="ZGW-6P-3cX"/>
                 <outlet property="ScoreALabel" destination="9pd-wD-9Cw" id="0bb-k9-JsT"/>
                 <outlet property="ScoreBLabel" destination="6SP-3h-BCd" id="F0C-Mu-ezJ"/>
+                <outlet property="StartButton" destination="pO2-rO-k7H" id="zwq-uC-OcQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,39 +31,42 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="v6R-T9-vDp">
                     <rect key="frame" x="20" y="94" width="374" height="748"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-9f-kwX">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-9f-kwX">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="196"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pd-wD-9Cw" userLabel="ScoreALabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="196"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="196"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="YWq-p5-Rb1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GgW-dz-D0r">
-                                    <rect key="frame" x="41.5" y="0.0" width="332.5" height="196"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GgW-dz-D0r">
+                                    <rect key="frame" x="40" y="0.0" width="334" height="196"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-Cb-zDi" userLabel="A1Button">
-                                            <rect key="frame" x="0.0" y="0.0" width="111" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="A1Button:" destination="-1" eventType="touchUpInside" id="lQW-ol-Qa5"/>
-                                                <action selector="A1ButtonAction:" destination="-1" eventType="touchUpInside" id="2Gt-Km-ue9"/>
+                                                <action selector="A1ButtonAction:" destination="-1" eventType="touchUpInside" id="zhc-B2-V54"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-Rr-PCt" userLabel="A2Button">
-                                            <rect key="frame" x="111" y="0.0" width="110.5" height="196"/>
+                                            <rect key="frame" x="118" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="A2Button:" destination="-1" eventType="touchUpInside" id="P0o-W8-NaT"/>
                                                 <action selector="A2ButtonAction:" destination="-1" eventType="touchUpInside" id="Nzi-vB-EIA"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-WS-qe9" userLabel="A3Button">
-                                            <rect key="frame" x="221.5" y="0.0" width="111" height="196"/>
+                                            <rect key="frame" x="236" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="A3Button:" destination="-1" eventType="touchUpInside" id="7d7-ty-heE"/>
                                                 <action selector="A3ButtonAction:" destination="-1" eventType="touchUpInside" id="i7H-aj-S6D"/>
                                             </connections>
                                         </button>
@@ -68,43 +78,53 @@
                             <rect key="frame" x="0.0" y="276" width="374" height="196"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFx-dh-NhA">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="196"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="196"/>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO2-rO-k7H" userLabel="startButton">
+                                    <rect key="frame" x="328" y="0.0" width="46" height="196"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="StartButtonAction:" destination="-1" eventType="touchUpInside" id="yhS-zd-LuO"/>
+                                    </connections>
+                                </button>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acI-XU-ZL7">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="acI-XU-ZL7">
                             <rect key="frame" x="0.0" y="552" width="374" height="196"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-3h-BCd" userLabel="ScoreBLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="196"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="196"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Kc4-Kp-C20"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BRd-3Y-Nql">
-                                    <rect key="frame" x="41.5" y="0.0" width="332.5" height="196"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BRd-3Y-Nql">
+                                    <rect key="frame" x="40" y="0.0" width="334" height="196"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p1-FV-V55" userLabel="B1Button">
-                                            <rect key="frame" x="0.0" y="0.0" width="111" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="B1Button:" destination="-1" eventType="touchUpInside" id="utw-Ou-b17"/>
                                                 <action selector="B1ButtonAction:" destination="-1" eventType="touchUpInside" id="8o5-L1-qKz"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-Ag-AGI" userLabel="B2Button">
-                                            <rect key="frame" x="111" y="0.0" width="110.5" height="196"/>
+                                            <rect key="frame" x="118" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="B2Button:" destination="-1" eventType="touchUpInside" id="Ujt-M1-Ve0"/>
                                                 <action selector="B2ButtonAction:" destination="-1" eventType="touchUpInside" id="AEL-2u-t9g"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-OV-Wpu" userLabel="B3Button">
-                                            <rect key="frame" x="221.5" y="0.0" width="111" height="196"/>
+                                            <rect key="frame" x="236" y="0.0" width="98" height="196"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="B3Button:" destination="-1" eventType="touchUpInside" id="Y8R-Il-WyN"/>
                                                 <action selector="B3ButtonAction:" destination="-1" eventType="touchUpInside" id="xGq-oS-JRL"/>
                                             </connections>
                                         </button>
