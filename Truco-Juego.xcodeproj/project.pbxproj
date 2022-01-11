@@ -15,6 +15,8 @@
 		0328593D278A24A300F2C21A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328593B278A24A300F2C21A /* HomeViewController.xib */; };
 		03285940278A25B500F2C21A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328593F278A25B500F2C21A /* Extensions.swift */; };
 		03285943278A2C7A00F2C21A /* CardsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03285942278A2C7A00F2C21A /* CardsData.swift */; };
+		03EF00C7278CCEF90054BF6D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EF00C5278CCEF90054BF6D /* FirstViewController.swift */; };
+		03EF00C8278CCEF90054BF6D /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EF00C6278CCEF90054BF6D /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0328593B278A24A300F2C21A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0328593F278A25B500F2C21A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		03285942278A2C7A00F2C21A /* CardsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsData.swift; sourceTree = "<group>"; };
+		03EF00C5278CCEF90054BF6D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		03EF00C6278CCEF90054BF6D /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				03285938278A23FB00F2C21A /* Launch */,
+				03EF00C4278CCEBB0054BF6D /* FirstView */,
 				03285939278A247800F2C21A /* Home */,
 				0328593E278A258100F2C21A /* Extensions */,
 				03285941278A25CE00F2C21A /* Resources */,
@@ -103,6 +108,15 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		03EF00C4278CCEBB0054BF6D /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				03EF00C5278CCEF90054BF6D /* FirstViewController.swift */,
+				03EF00C6278CCEF90054BF6D /* FirstViewController.xib */,
+			);
+			path = FirstView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,7 @@
 				03285931278A23E900F2C21A /* LaunchScreen.storyboard in Resources */,
 				0328592E278A23E900F2C21A /* Assets.xcassets in Resources */,
 				0328593D278A24A300F2C21A /* HomeViewController.xib in Resources */,
+				03EF00C8278CCEF90054BF6D /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +193,7 @@
 				03285925278A23E500F2C21A /* AppDelegate.swift in Sources */,
 				03285927278A23E500F2C21A /* SceneDelegate.swift in Sources */,
 				0328593C278A24A300F2C21A /* HomeViewController.swift in Sources */,
+				03EF00C7278CCEF90054BF6D /* FirstViewController.swift in Sources */,
 				03285943278A2C7A00F2C21A /* CardsData.swift in Sources */,
 				03285940278A25B500F2C21A /* Extensions.swift in Sources */,
 			);

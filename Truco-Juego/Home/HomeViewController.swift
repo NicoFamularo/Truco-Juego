@@ -8,6 +8,38 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    
+    //MARK: Outlets
+        
+        @IBOutlet weak var ScoreALabel: UILabel!
+        
+        
+        @IBOutlet weak var A1Button: UIButton!
+        
+        
+        @IBOutlet weak var A2Button: UIButton!
+        
+        
+        @IBOutlet weak var A3Button: UIButton!
+        
+        
+        @IBOutlet weak var ScoreBLabel: UILabel!
+        
+        
+        @IBOutlet weak var B1Button: UIButton!
+        
+        
+        @IBOutlet weak var B2Button: UIButton!
+        
+        
+        @IBOutlet weak var B3Button: UIButton!
+        
+        
+        @IBOutlet weak var ManoImage: UIImageView!
+        
+        
+        @IBOutlet weak var StartButton: UIButton!
 
 //MARK: Variables / Constants
     
@@ -25,12 +57,15 @@ class HomeViewController: UIViewController {
     
     var deck: [Int : Dictionary<String, Int>.Element]? = nil
     
+    
+    
+    
+    //MARK: Function calling
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setButtonsTitlesConfigurations()
-        
-//MARK: Function calling
+        setTitlesConfigurations()
         
         resetGameScore()
         
@@ -45,40 +80,21 @@ class HomeViewController: UIViewController {
         print("----------------------")
     }
     
+    //MARK: Set Screen Init
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     
 
-    
-//MARK: Outlets
-    
-    @IBOutlet weak var ScoreALabel: UILabel!
-    
-    
-    @IBOutlet weak var A1Button: UIButton!
-    
-    
-    @IBOutlet weak var A2Button: UIButton!
-    
-    
-    @IBOutlet weak var A3Button: UIButton!
-    
-    
-    @IBOutlet weak var ScoreBLabel: UILabel!
-    
-    
-    @IBOutlet weak var B1Button: UIButton!
-    
-    
-    @IBOutlet weak var B2Button: UIButton!
-    
-    
-    @IBOutlet weak var B3Button: UIButton!
-    
-    
-    @IBOutlet weak var ManoImage: UIImageView!
-    
-    
-    @IBOutlet weak var StartButton: UIButton!
     
     
     
@@ -111,6 +127,8 @@ class HomeViewController: UIViewController {
         pickAnyMano()
         
         setCardTitles()
+        
+        showGameScore()
         
         print("----------------------")
     }
@@ -175,13 +193,27 @@ extension HomeViewController{
 extension HomeViewController{
     
     
-    //MARK: Reset Score
+    //MARK: Score
     
     func resetGameScore(){
         PlayerA.score = 0
         PlayerB.score = 0
         pickFirstMano()
     }
+    
+    
+    func showGameScore(){
+        
+        ScoreALabel.text = "\(PlayerA.score)"
+        ScoreBLabel.text =  "\(PlayerB.score)"
+        
+    }
+    
+    
+    
+    
+    
+    
     
     //MARK: Manos
     
@@ -283,24 +315,17 @@ extension HomeViewController {
         
     
     func setCardTitles(){
-        
         A1Button.setTitle(a1card!.key, for: .normal)
-        
         A2Button.setTitle(a2card!.key, for: .normal)
-        
         A3Button.setTitle(a3card!.key, for: .normal)
         
         
         B1Button.setTitle(b1card!.key, for: .normal)
-        
         B2Button.setTitle(b2card!.key, for: .normal)
-        
         B3Button.setTitle(b3card!.key, for: .normal)
-        
-        
     }
     
-    func setButtonsTitlesConfigurations(){
+    func setTitlesConfigurations(){
         
         let buttonsList = [A1Button, A2Button, A3Button, B1Button, B2Button, B3Button]
         
@@ -310,8 +335,17 @@ extension HomeViewController {
             index?.titleLabel?.textAlignment = .center
         }
         
+        ScoreALabel.adjustsFontSizeToFitWidth = true
+        ScoreALabel.textAlignment = .center
+        
+        ScoreBLabel.adjustsFontSizeToFitWidth = true
+        ScoreBLabel.textAlignment = .center
+        
         
     }
+    
+    
+    
     
 }
 

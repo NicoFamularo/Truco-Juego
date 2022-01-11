@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
 //MARK: Modification for no storyboard
         guard let windowScene = (scene as? UIWindowScene) else { return } // change _ -> "windowScene"
         
@@ -20,8 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = HomeViewController()
+        window?.rootViewController = UINavigationController(rootViewController: FirstViewController())
         window?.makeKeyAndVisible()
+        
+        
+        
         
 //END MARK
         
